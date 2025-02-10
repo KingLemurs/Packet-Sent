@@ -83,6 +83,17 @@ class MainMenu extends Phaser.Scene {
             },
         }
 
+        let creditConfig = {
+            fontFamily: 'Arial',
+            fontSize: '16px',
+            color: '#FFFFFF',
+            align: 'left',
+            padding: {
+                top: 5,
+                bottom: 5,
+            },
+        }
+
         this.add.text(game.config.width/2, game.config.height/2 - 200,
             'PACKET SENT', titleConfig).setOrigin(0.5)
 
@@ -97,6 +108,10 @@ class MainMenu extends Phaser.Scene {
             'Dont hit the blocks and collect the fuel cells to keep going', scoreConfig).setOrigin(0.5)
         this.add.text(game.config.width/2, game.config.height/2,
             'As time goes on, blocks will take more fuel, and fuel drains faster', scoreConfig).setOrigin(0.5)
+
+        // credits
+        this.add.text(10, game.config.height - 32,
+            'CREDITS:   Music: Blank - Disfigure,  Sounds: All by me,  Art: All by me,  Programming: All by me', creditConfig).setOrigin(0)
     }
 
     update() {
